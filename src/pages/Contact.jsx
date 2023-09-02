@@ -7,6 +7,7 @@ import { toast } from 'react-toastify'
 function Contact() {
   const [message, setMessage] = useState('')
   const [landlord, setLandlord] = useState(null)
+  // eslint-disable-next-line
   const [searchParams, setSearchParams] = useSearchParams()
 
   const params = useParams()
@@ -54,8 +55,14 @@ function Contact() {
               ></textarea>
             </div>
 
-            <a href={`mailto:${landlord.email}?Subject=${searchParams.get('listingName')}&body=${message}`}>
-              <button type='button' className="primaryButton">Send Message</button>
+            <a
+              href={`mailto:${landlord.email}?Subject=${searchParams.get(
+                'listingName'
+              )}&body=${message}`}
+            >
+              <button type="button" className="primaryButton">
+                Send Message
+              </button>
             </a>
           </form>
         </main>

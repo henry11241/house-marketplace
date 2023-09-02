@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
-import { useNavigate, useNavigation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import {
   collection,
   getDocs,
   query,
-  orderby,
   limit,
   orderBy,
 } from 'firebase/firestore'
